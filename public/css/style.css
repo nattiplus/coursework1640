@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/*----------------------Header----------------------------*/
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color:#06BBCC;
+    color: white;
+}
+
+
+
+
+
+
+.shadow{
+    box-shadow: 0px 0px 5px 5px #999999;
+}
+.user-cmt{
+    height: 50px;
+    width: 50px;
+}
+.center{
+    margin: auto;
+    width: 75%;
+}
+.right {
+    display: flex;
+}
+
+.user {
+    height: 180px;
+}
+
+.right .text {
+    padding: 10px 20px;
+}
+
+.right .text h1 {
+    color: #555;
+}
+
+.right .text p {
+    font-size: 14px;
+    color: #111;
+    line-height: 1.9;
+}
+
+.left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+
+.left h1 {
+    color: #ccc;
+}
+
+.left p {
+    color: lightblue;
+}
+
+.bg{
+    background-image: url("https://previews.123rf.com/images/bbbaaaaz/bbbaaaaz1607/bbbaaaaz160700001/61569391-modern-background-with-plexus-style-perfect-for-website-or-banner-backgrounds-or-as-a-wallpaper.jpg");
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-content{
+    text-align: center;
+    padding: 30px;
+    margin-top: 25%;
+    margin-left: 50%;
+    width: 600px;
+    color: #111;
+    background: transparent;
+    background-color: rgba(255, 255, 255,.2);
+    transform: translate(-50%, -50%);
+}
+
+.of-hidden{
+    overflow: hidden;
+}
+
+.loader{
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 250px;
+}
+
+.loader.hidden{
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Table */
+.table-container{
+    padding: 0 10%;
+    /* margin: 40px auto 0; */
+}
+
+.heading{
+    font-size: 30px;
+    text-align: center;
+    color: #DD2F6E;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.table-custom{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table-custom thead{
+    background-color: #0d6efd;
+}
+
+.table-custom thead tr th{
+    font-size: 14px;
+    font-weight: medium;
+    letter-spacing: 0.35px;
+    color: #fff;
+    opacity: 1;
+    padding: 12px;
+    border: 1px solid #dee2e685;
+}
+
+.table-custom tbody tr td{
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    font-weight: normal;
+    color: #333;
+    background-color: #dee2e685;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #dee2e685;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+}
+
+/* Hidden Prev, Next Button For pagination */
+/* .w-5{
+    display: none;
+} */
+
+@keyframes fadeOut {
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 1000px) {
+    .user {
+        height: 150px;
+    }
+    .center{
+        margin: 0;
+        width: 100%;
+    }
+    .right .text p {
+        font-size: 12px;
+    }
+    .left h1, p {
+        font-size: 18px;
+        padding-left: 20px;
+    }
+    .fa-5x{
+        font-size: 2rem;
+    }
+    .fa-3x{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .user {
+        height: 150px;
+    }
+    .center{
+        margin: 0;
+        width: 100%;
+    }
+    .right .text p {
+        font-size: 12px;
+    }
+    .left div:nth-child(1)::before {
+        top: -10px;
+        left: 30px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .right .text p {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* .button-danger{
+        display: inline-block;
+    }
+
+    .button-primary{
+        display: inline-block;
+    }
+
+    .button-success{
+        display: inline-block;
+    }
+
+    .button-dark-pink{
+        display: inline-block;
+    } */
+
+    .table-custom thead{
+        display: none;
+    }
+
+    .table-custom, .table-custom tbody, .table-custom tr, .table-custom td{
+        display: block;
+        width: 100%;
+    }
+
+    .table-custom tr{
+        margin-bottom: 15px;
+    }
+
+    .table-custom tbody tr td{
+        text-align: right;
+        position: relative;
+    }
+
+    .table-custom td:before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+
