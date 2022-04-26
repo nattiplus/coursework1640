@@ -190,8 +190,10 @@
                             array_push($sort_final_closure_date, $final_closure_date);
                         }
                     }
-                    if (Auth::user()->can('export.ideas.documents') && Auth::user()->can('export.csv') && $sort_final_closure_date[0] < Carbon\Carbon::now() )
-                    {?>
+                    if($sort_final_closure_date != null)
+                    {
+                        if (Auth::user()->can('export.ideas.documents') && Auth::user()->can('export.csv') && $sort_final_closure_date[0] < Carbon\Carbon::now() )
+                        {?>
                         <div class="text-center mt-3">
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -221,7 +223,7 @@
                             </div>
                         </div>
                 <?php    
-                    }
+                        }
                     else if(Auth::user()->can('export.ideas.documents') && $sort_final_closure_date[0] < Carbon\Carbon::now())
                     {?>
                         <div class="text-center mt-3">
@@ -317,7 +319,8 @@
                             </div>
                         </div>
                     </div>
-                <?php    
+                <?php  
+                    }  
                     }
                 }
             ?>
