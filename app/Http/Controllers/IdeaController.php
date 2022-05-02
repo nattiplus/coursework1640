@@ -531,9 +531,9 @@ class IdeaController extends Controller
             $data_comments = Comment::where(['idea_id' => $idea_id, 'comment_id' => 0])->orderBy('create_date', 'desc')->get();
 
             // Send Mail For Actor of idea
-            $username = Auth::user()->name;
-            $user_receive_mail_id = Auth::user()->id;
-            $user_mail = User::find($user_receive_mail_id)->value('email');
+            $user_receive_mail = Idea::find($idea_id)->user;
+            $username = $user_receive_mail->name;
+            $user_mail = $user_receive_mail->email;
             $idea_title = Idea::find($idea_id)->value('title');
             $title = 'You have new comment on your "'.$idea_title. '" idea';
             $content = $request->content;
